@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="Display Event Objects">
+	<meta charset="utf-8">
+	<title>Display Event Objects</title>
+	<link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+	<!-- TODO add kunikla favicon -->
+	<link rel="icon" href="kunikla.ico" sizes="16x16" />
+	<!--<link rel="icon" href="https://javascriptforwp.com/wp-content/uploads/2016/04/cropped-favicon-32x32.png" sizes="32x32" />-->
+	<!--<link rel="icon" href="https://javascriptforwp.com/wp-content/uploads/2016/04/cropped-favicon-192x192.png" sizes="192x192" />-->
+	<!--<link rel="apple-touch-icon-precomposed" href="https://javascriptforwp.com/wp-content/uploads/2016/04/cropped-favicon-180x180.png" />-->
+	<!--<meta name="msapplication-TileImage" content="https://javascriptforwp.com/wp-content/uploads/2016/04/cropped-favicon-270x270.png" />-->
+</head>
+
+<body>
+
+<header>
+	<h1>Viewing DOM Event Objects</h1>
+	<div id="instructions">
+		<ul>
+			<li>Open the browser's Developer Tools and display the Console</li>
+			<li>Select the desired group of events from the first menu</li>
+			<li>Select the desired event from the second menu</li>
+			<li>Follow the on-screen instructions to trigger the event</li>
+			<li>The event object will display in the Console</li>
+			<li>Links to MDN documentation available; documentation will open in new tab</li>
+		</ul>
+	</div>
+</header>
+
+<div class="menu html-menu">
+	<ul>
+		<li class="menu-item mouse-movement active">Mouse Movement</li>
+		<li class="menu-item click-on-link">Click on link</li>
+		<li class="menu-item explore-form">Explore form</li>
+		<li class="menu-item drag-drop">Drag and Drop</li>
+	</ul>
+</div>
+<div class="menu2 mouse-movement-menu">
+	<ul>
+		<li class="menu-item mouse-movement-menu-item mouseover active">mouseover</li>
+		<li class="menu-item mouse-movement-menu-item mouseenter">mouseenter</li>
+		<li class="menu-item mouse-movement-menu-item mouseleave">mouseleave</li>
+	</ul>
+</div>
+<div class="menu2 click-on-link-menu hidden">
+	<ul>
+		<li class="menu-item click-on-link-menu-item click active">click</li>
+		<li class="menu-item click-on-link-menu-item dblclick">dblclick</li>
+	</ul>
+</div>
+<div class="menu2 explore-form-menu hidden">
+	<ul>
+		<li class="menu-item explore-form-menu-item keydown active">keydown</li>
+		<li class="menu-item explore-form-menu-item keyup">keyup</li>
+		<li class="menu-item explore-form-menu-item focus">focus</li>
+		<li class="menu-item explore-form-menu-item blur">blur</li>
+		<li class="menu-item explore-form-menu-item change">change</li>
+		<li class="menu-item explore-form-menu-item submit">submit</li>
+		<li class="menu-item explore-form-menu-item reset">reset</li>
+	</ul>
+</div>
+<div class="menu2 drag-drop-menu hidden">
+	<ul>
+		<li class="menu-item drag-drop-menu-item dragstart active">dragstart</li>
+		<li class="menu-item drag-drop-menu-item dragend">dragend</li>
+		<li class="menu-item drag-drop-menu-item dragenter">dragenter</li>
+		<li class="menu-item drag-drop-menu-item dragover">dragover</li>
+		<li class="menu-item drag-drop-menu-item dragleave">dragleave</li>
+		<li class="menu-item drag-drop-menu-item drop">drop</li>
+	</ul>
+</div>
+
+<div class="html-modules">
+	<div id="mouse-movement" class="html-module">
+		<h3>Drag mouse over text to see events in console</h3>
+	</div>
+	<div id="click-on-link" class="html-module hidden">
+		<h3><a href="">Click here to see "click" event node in console</a></h3>
+	</div>
+	<div id="explore-form" class="html-module hidden">
+		<form id="contact" action="" method="post" novalidate>
+			<p>
+				<label for="name">Name<br/>View keydown and keyup event objects</label>
+				<input type="text" name="name" id="name" value="" placeholder="Your name" >
+			</p>
+			<p>
+				<label for="email">Email<br/>View focus and blur event objects</label>
+				<input type="email" name="email"  id="email" value="" placeholder="Your email" >
+			</p>
+			<p>
+				<label for="message">Message<br/>View change event object</label>
+				<textarea name="message" id="message" title="message"></textarea>
+			</p>
+			<p>
+				<input type="submit" id="submit" value='View "submit" Event object'>
+			</p>
+			<p>
+				<input type="reset"  id="reset"  value='View "reset" Event object'>
+			</p>
+		</form>
+	</div>
+	<div id="drag-drop" class="html-module hidden">
+		<div class="draggable items">
+			<h2>Draggables</h2>
+			<div class="draggable item move" draggable="true">Move Me!</div>
+			<div class="draggable item copy" draggable="true">Copy Me!</div>
+		</div>
+		<div class="droppable">
+			<h2>Drop Zone</h2>
+		</div>
+	</div>
+</div>
+
+<div class="documentation">
+	<h3>MDN Documentation</h3>
+	<div class="doc-items mouse-movement-doc">
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseover"  target="_blank">mouseover</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseenter" target="_blank">mouseenter</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseleave" target="_blank">mouseleave</a>
+	</div>
+	<div class="doc-items click-on-link-doc hidden">
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/click"      target="_blank">click</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/dblclick"   target="_blank">dblclick</a>
+	</div>
+	<div class="doc-items explore-form-doc hidden">
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/keydown"    target="_blank">keydown</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/keyup"      target="_blank">keyup</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/focus"      target="_blank">focus</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/blur"       target="_blank">blur</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/change"     target="_blank">change</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/submit"     target="_blank">submit</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/reset"      target="_blank">reset</a>
+	</div>
+	<div class="doc-items drag-drop-doc hidden">
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/dragstart"  target="_blank">dragstart</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/dragend"    target="_blank">dragend</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/dragenter"  target="_blank">dragenter</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/dragover"   target="_blank">dragover</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/dragleave"  target="_blank">dragleave</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://developer.mozilla.org/en-US/docs/Web/Events/drop"       target="_blank">drop</a>
+	</div>
+</div>
+<div class="documentation drag-drop-menu hidden">
+
+</div>
+
+<footer>
+	<div id="clear-button">Clear Console</div>
+	<div id="copy-notice">&copy; 2017 Christina Hamilton</div>
+	<div id="license">
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+			<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />
+		This work is licensed under a
+		<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+	</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
