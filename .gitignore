@@ -1,2 +1,12 @@
+# https://github.com/kunikla/display-event-object
+# https://kunikla.github.io/display-event-object
+# 
+# Created by .ignore support plugin (hsz.mobi)
+
+# directories
+.idea
+
+# files
 .directory
-/.idea
+.LICENSE.md.kate-swp
+.*.kate-swp

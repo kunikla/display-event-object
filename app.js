@@ -317,7 +317,7 @@ function processDragDrop (e) {
     switch (eventType) {
         case 'dragstart':
             if ( e.target.classList.contains( 'copy' ) ) {
-                copying = event.target;
+                copying = e.target;
                 copying.classList.add( 'active' );
             }
             if ( e.target.classList.contains( 'move' ) ) {
