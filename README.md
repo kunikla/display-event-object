@@ -1,4 +1,5 @@
-# display-event-object
+# https://github.com/kunikla/display-event-object
+# https://kunikla.github.io/display-event-object
 
 This program assists the user in learning about a specific set of DOM events
 by displaying their Event Objects in the JavaScript console, as well as
@@ -10,8 +11,12 @@ JavaScript for WordPress, in Lesson 1.4.8 - A Look at More Events.
 The code borrows heavily from the sample code for
 Lesson 1.4.1 - Introduction to DOM Events.
 
-Version 1.0.0 - 6/27/17 - initial upload to GitHub
-
+Version 1.0.2 - 6/29/17  
+    1. Link to favicon files in Media Library repository  
+    2. Remove licensed media file from repository  
+    3. Fixed dragstart bug in dragdrop event handler  
+    4. Put licensing info in the footer  
+    
 Version 1.0.1 - 6/28/17  
     1. Removed TODO comments in index.html and style.css  
     2. Cursor is changed to "pointer" when hovering over "li" in menus  
@@ -21,5 +26,7 @@ Version 1.0.1 - 6/28/17
     6. Added TODO's to put Clear Console at top of page
     and display instructions in an overlay (lightbox)  
     7. Removed unused div near bottom of index.html
+
+Version 1.0.0 - 6/27/17 - initial upload to GitHub
   
     
