@@ -378,6 +378,17 @@ function processDragDrop (e) {
 
 /********************************
  * Event Handler
+ * for Display Instructions button
+ * and Hide Instructions button
+ *
+ *******************************/
+function processInstructions (e) {
+    e.preventDefault();
+    document.getElementById("instructions").classList.toggle("hidden");
+}
+
+/********************************
+ * Event Handler
  * for Clear Console button
  *
  *******************************/
@@ -478,7 +489,11 @@ droppable.addEventListener ('dragover',   processDragDrop, false);
 droppable.addEventListener ('dragleave',  processDragDrop, false);
 droppable.addEventListener ('drop',       processDragDrop, false);
 
+// Assign event listener to Display Instructions and Hide Instructions buttons
+document.getElementById('display-instructions').addEventListener ('click', processInstructions, false);
+document.getElementById('hide-instructions'   ).addEventListener ('click', processInstructions, false);
+
 // Assign event listener to Clear Console button
-document.getElementById('clear-button').addEventListener ('click', processClear, false);
+document.getElementById('clear-console').addEventListener ('click', processClear, false);
 
 // End 1.4.7.1

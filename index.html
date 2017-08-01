@@ -39,15 +39,10 @@
 
 <header>
 	<h1>Viewing DOM Event Objects</h1>
-	<!--TODO make instructions display in an overlay (lightbox)-->
-	<div id="instructions">
+	<div class="header-buttons">
 		<ul>
-			<li>Open the browser's Developer Tools and display the Console</li>
-			<li>Select the desired group of events from the first menu</li>
-			<li>Select the desired event from the second menu</li>
-			<li>Follow the on-screen instructions to trigger the event</li>
-			<li>The event object will display in the Console</li>
-			<li>Links to MDN documentation available; documentation will open in new tab</li>
+			<li id="display-instructions">Show Instructions</li>
+			<li id="clear-console">Clear Console</li>
 		</ul>
 	</div>
 </header>
@@ -56,7 +51,7 @@
 	<ul>
 		<li class="menu-item mouse-movement active">Mouse Movement</li>
 		<li class="menu-item click-on-link">Click on link</li>
-		<li class="menu-item explore-form">Explore form</li>
+		<li class="menu-item explore-form">Form</li>
 		<li class="menu-item drag-drop">Drag and Drop</li>
 	</ul>
 </div>
@@ -97,23 +92,24 @@
 
 <div class="html-modules">
 	<div id="mouse-movement" class="html-module">
-		<h3>Drag mouse over text to see events in console</h3>
+		<h3>Move cursor over text to see event objects in console</h3>
 	</div>
 	<div id="click-on-link" class="html-module hidden">
-		<h3><a href="">Click here to see "click" event node in console</a></h3>
+		<h3><a href="">Click or double-click here to see event objects in console</a></h3>
 	</div>
 	<div id="explore-form" class="html-module hidden">
 		<form id="contact" action="" method="post" novalidate>
 			<p>
-				<label for="name">Name<br/>View keydown and keyup event objects</label>
+				<label for="name">Name<br/>Type text here to view <span class="event-name">keydown</span> and <span class="event-name">keyup</span> event objects in console</label>
 				<input type="text" name="name" id="name" value="" placeholder="Your name" >
 			</p>
 			<p>
-				<label for="email">Email<br/>View focus and blur event objects</label>
+				<label for="email">Email<br/>Select this field to view <span class="event-name">focus</span>  event object in console<br>
+					Select this field and then a different field to view <span class="event-name">blur</span> event object in console<br></label>
 				<input type="email" name="email"  id="email" value="" placeholder="Your email" >
 			</p>
 			<p>
-				<label for="message">Message<br/>View change event object</label>
+				<label for="message">Message<br/>Type here then select another field to view <span class="event-name">change</span> event object in console</label>
 				<textarea name="message" id="message" title="message"></textarea>
 			</p>
 			<p>
@@ -166,10 +162,22 @@
 	</div>
 </div>
 
+<!--TODO make instructions display in an overlay (lightbox)-->
+<div id="instructions" class="hidden">
+	<ul>
+		<li>Open the browser's Developer Tools and display the Console</li>
+		<li>Select the desired group of events from the first menu</li>
+		<li>Select the desired event from the second menu</li>
+		<li>Follow the on-screen instructions to trigger the event</li>
+		<li>The event object will be displayed in the Console</li>
+		<li>NOTE: Only the event selected in the menu will be displayed</li>
+		<li>For more information about the event object, click on the link to the MDN documentation, which will be displayed in a new tab</li>
+	</ul>
+	<div id="hide-instructions">Hide Instructions</div>
+</div>
+
 <footer>
-	<!--TODO move Clear Console button to header beside button to display instructions-->
-	<div id="clear-button">Clear Console</div>
-	<div id="copy-notice">&copy; 2017 Christina Hamilton</div>
+		<div id="copy-notice">&copy; 2017 Christina Hamilton</div>
 	<div id="license">
 		<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by/4.0/">
 			<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />
