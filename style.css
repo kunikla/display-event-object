@@ -227,6 +227,7 @@ h1 {
     bottom: 50px;
     left: 50px;
     right: 50px;
+    overflow: scroll;
     padding-top: 60px;
     color: black;
 }

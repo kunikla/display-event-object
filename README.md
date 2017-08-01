@@ -11,6 +11,9 @@ JavaScript for WordPress, in Lesson 1.4.8 - A Look at More Events.
 The code borrows heavily from the sample code for
 Lesson 1.4.1 - Introduction to DOM Events.
 
+Version 1.0.3.1 - 7/31/17  
+    1. Set up scrolling for when instructions overflow in landscaped mobile device  
+
 Version 1.0.3 - 7/31/17  
     1. Create "Display Instructions" button in header  
     2. Move "Clear Console" button to header  
