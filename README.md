@@ -1,15 +1,25 @@
-# https://github.com/kunikla/display-event-object
-# https://kunikla.github.io/display-event-object
+# Code found in [https://github.com/kunikla/display-event-object](https://github.com/kunikla/display-event-object)
+# App found at [https://kunikla.github.io/display-event-object](https://kunikla.github.io/display-event-object)
 
 This program assists the user in learning about a specific set of DOM events
-by displaying their Event Objects in the JavaScript console, as well as
-links to their MDN documentation.
+by displaying their Event Objects in the Developer Tools console, as well as
+links to the events' MDN documentation.
 
 It was created in response to suggestions by Zac Gordon in his course
 JavaScript for WordPress, in Lesson 1.4.8 - A Look at More Events.
 
 The code borrows heavily from the sample code for
 Lesson 1.4.1 - Introduction to DOM Events.
+
+Version 1.0.3 - 7/31/17  
+    1. Create "Display Instructions" button in header  
+    2. Move "Clear Console" button to header  
+    3. Move #instructions div to bottom of page, add class of "hidden"  
+    4. Add HTML & CSS for a "Hide Instructions" button    
+    5. Change CSS for #instructions div to be appropriate for an overlay  
+    6. Add event listener to "Display Instructions" button 
+    7. Add event listener to "Hide Instructions" button  
+    8. Clarify overlay and on-screen instructions
 
 Version 1.0.2 - 6/29/17  
     1. Link to favicon files in Media Library repository  
